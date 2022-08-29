@@ -1,0 +1,25 @@
+{
+  "name": "semester-project-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Eirik-Haukeland/Semester-Project-1.git"
+  },
+  "author": "Eirik Berget Haukeland",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Eirik-Haukeland/Semester-Project-1/issues"
+  },
+  "homepage": "https://github.com/Eirik-Haukeland/Semester-Project-1#readme",
+  "dependencies": {
+    "eslint": "^8.23.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "prettier": "^2.7.1"
+  }
+}
