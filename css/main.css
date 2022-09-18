@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url(settings.css);
+@import url(aside.css);
+
+* {
+  margin: 0;
+  font-family: 'Noto Sans', sans-serif;
+  color: var(--dark-text);
+}
+
+  *[hidden] {
+    display: none;
+  }
+
+body {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+  width: 100vw;
+  height: 100vh;
+}
+
+    main {
+      grid-column: 1/ span 5;
+      grid-row: 1;
+      display: grid;
+      grid-template-columns: subgrid;
+      gap: inherit;
+      background-color: var(--ligth-bg);
+    }
+
+    #page-heading {
+      grid-column: span 4;
+    }
+
+      h1 {
+        font-size: 67px;
+        font-family: 'Aleo', serif;
+      }
+
+    #mobile-nav {
+      display: grid;
+      align-content: space-around;
+      justify-content: center;
+      gap: 1px;
+    }
+
+      #mobile-nav > a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        height: 75px;
+        width: 75px;
+        border-radius: 25rem;
+        
+        background-color: var(--dark-bg);
+      }
+
+      #mobile-nav > a > img{
+        height: 93px;
+      }
+
+      #open-menu-btn {
+        height: 75px;
+        background-color: var(--ligth-bg);
+        border: none;
+      }
+
+      #open-menu-btn img {
+        height: 3rem;
+        border-radius: unset;
+      }

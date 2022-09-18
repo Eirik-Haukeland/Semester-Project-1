@@ -1,0 +1,104 @@
+aside {
+  position: fixed;
+  left: 0;
+  top: 0;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 2rem;
+  grid-template-rows: fit-content .1rem;
+  justify-content: center;
+  
+  height: 100vh;
+  width: 80vw;
+  padding: 1rem;
+  
+  background-color: var(--dark-bg);
+  overflow: scroll;
+}
+
+aside:not([hidden]) + main {
+  overflow: hidden;
+}
+
+aside > * {
+  grid-column: 2/ 4;
+}
+
+#close-menu-btn {
+  grid-column: 1/ 2;
+  grid-row: 1/ 2;
+
+  height: 3rem;
+  height: auto;
+  border: unset;
+
+  background-color: var(--dark-bg);
+  border: none;
+}
+
+#close-menu-btn > img {
+  height: 3rem;
+  border-radius: unset;
+}
+
+aside > a {
+  grid-row: 1 / 2;
+
+  background-color: var(--middle-bg);
+  height: 8rem;
+  width: 8rem;
+  border-radius: 25rem;
+  justify-self: center;
+}
+
+aside img {
+  height: 100%;
+  width: auto;
+  border-radius: 25rem;
+}
+
+aside ul {
+  list-style: none;
+}
+
+#menu {
+  padding-left: 0;  /* remove intent form main menu*/
+}
+
+#menu li {
+  width: fit-content;
+}
+
+#menu a {
+  text-decoration-color: var(--hi-ligth);
+  text-decoration-thickness: .15em;
+}
+
+#menu .open-page,
+#menu li:hover,
+#menu a:focus {
+  background-color: var(--hi-ligth);
+  color: var(--dark-text);
+  text-decoration: none;
+  padding-left: .15rem;
+}
+
+.sub-menu {
+  display: none;
+  padding: 0;
+  position: relative;
+  left: 1rem;
+}
+
+:is(.open-page, li:hover, a:focus) +.sub-menu,
+.sub-menu:hover {
+  display: initial;
+}
+
+aside p,
+#menu a {
+  font-size: 28px;
+  font-family: 'Aleo', serif;
+  color: var(--ligth-text);
+}

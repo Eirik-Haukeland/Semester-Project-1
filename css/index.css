@@ -1,0 +1,30 @@
+
+#page-content {
+  display: grid;
+  grid-column: span 5;
+  padding-block: 2rem;
+  grid-template-rows: repeat(2, auto);
+  gap: 37px;
+}
+
+#page-content img {
+  height: auto;
+  width: 100vw;
+}
+
+#page-content img:nth-of-type(2) {
+  height: 13rem;
+  object-fit: cover;
+  object-position: 0 40%;
+}
+
+#page-content img:nth-of-type(3) {
+  height: 25rem;
+  object-fit: cover;
+  object-position: 0 77%;
+}
+
+#page-content p {
+  font-size: 21px;
+  padding-inline: 2.5rem;
+}
