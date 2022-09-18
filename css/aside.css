@@ -91,7 +91,10 @@ aside ul {
   left: 1rem;
 }
 
-:is(.open-page, li:hover, a:focus) +.sub-menu,
+:is(
+  .open-page, 
+  li:hover,
+  a:focus) +.sub-menu,
 .sub-menu:hover {
   display: initial;
 }
