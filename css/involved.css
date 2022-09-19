@@ -1,14 +1,9 @@
-h1{
-  position: relative;
-  left: -3rem;
-}
-
 section {
   display: grid;
   grid-column: span 5;
   /* padding-block: 2rem; */
   grid-template-rows: repeat(2, auto);
-  gap: 37px;
+  gap: .5rem;
 }
 
 section > * {
@@ -17,6 +12,7 @@ section > * {
 
 section h2 {
   justify-self: center;
+  margin-top: 1rem;
 }
 
 section img {
@@ -26,14 +22,16 @@ section img {
 
 section:nth-of-type(1) > img {
   height: 18rem;
-  object-fit: cover;
-  object-position: 0 30%;
+  width: auto;
+  justify-self: center;
+  /* object-fit: cover;
+  object-position: 0 30%; */
 }
 
 section:nth-of-type(2) > img {
-  height: 15rem;
+  height: 20rem;
   object-fit: cover;
-  object-position: 0 30%;
+  object-position: 0 70%;
 }
 
 section p {

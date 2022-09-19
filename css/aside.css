@@ -2,6 +2,7 @@ aside {
   position: fixed;
   left: 0;
   top: 0;
+  z-index: 2;
 
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -17,6 +18,10 @@ aside {
   overflow: scroll;
 }
 
+aside:not([hidden]) + main #open-menu-btn {
+  display: none;
+}
+
 aside:not([hidden]) + main {
   overflow: hidden;
 }
@@ -26,6 +31,9 @@ aside > * {
 }
 
 #close-menu-btn {
+  position: fixed;
+  left: 1rem;
+  top: 5rem;
   grid-column: 1/ 2;
   grid-row: 1/ 2;
 
