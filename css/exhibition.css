@@ -1,3 +1,7 @@
+main {
+  grid-template-rows: min-content min-content auto;
+}
+
 main > div:nth-of-type(2) {
   display: grid;
   grid-column: span 5;
@@ -55,17 +59,57 @@ table {
   gap: .1em;
   padding: 0;
   background-color: var(--hi-ligth);
+  position: relative;
 }
 
   #tabs > li {
     display: flex;
+    flex-direction: column;
     flex-grow: 1;
     justify-content: center;
+    /* background-color: var(--middle-bg); */
     cursor: pointer;
-    background-color: var(--middle-bg)
+    height: 5rem;
   }
 
-  #tabs > .prev {
+  #tabs > .selected {
+    flex-grow: 2;
+  }
+
+  #tabs > li > img {
+    position: relative;
+    height: 100%;
+    width: 5.45rem;
+    justify-self: flex-start;
+    object-fit: cover;
+    object-position: 0 70%;
+  }
+
+  /* #tabs > li > img::before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2rem;
+    height: 2rem;
+    z-index: 1;
+    background-color: #000;
+  } */
+
+  #tabs > li > span {
+    display: none;
+  }
+
+  #tabs > li > img:hover + span {
+    display: block;
+    position: absolute;
+    top: 5rem;
+    background-color: var(--hi-ligth);
+    align-self: center;
+    width: 10.5rem;
+    text-align: center;
+  }
+
+  #tabs > .prev img {
     clip-path: polygon(
       0% 0%,
       100% 0%,
@@ -75,7 +119,7 @@ table {
     );
   }
 
-  #tabs > .selected + li {
+  #tabs > .selected + li img {
     clip-path: polygon(
       .75rem 50%,
       0% 0%,
@@ -85,16 +129,17 @@ table {
     );
   }
 
-  #tabs > .selected {
+  #tabs > .selected img {
     background-color: var(--hi-ligth);
     border-radius: 0;
+    padding-inline: -.75rem;
     clip-path: polygon(
       0% 50%, /*left angle*/
-      10% 0%, /*left top*/
-      90% 0%, /*rigth top*/
+      .75rem 0%, /*left top*/
+      calc(100% - .75rem) 0%, /*rigth top*/
       100% 50%, /*rigth angle*/
-      90% 100%, /*rigth bottom*/
-      10% 100% /*left bottom*/
+      calc(100% - .75rem) 100%, /*rigth bottom*/
+      .75rem 100% /*left bottom*/
     );
   }
 
@@ -133,4 +178,10 @@ table {
 
 #module-tabs section img {
   width: 100%;
+}
+
+#biology\ and\ medicine img {
+  height: 20rem;
+  object-fit: cover;
+  object-position: 0 70%;
 }

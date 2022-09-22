@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="assets/images/icon-1719742.svg" type="image/svg">
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/exhibition.css">
+  <script src="js/tabs.js" defer></script>
   <script src="js/main.js" defer></script>
   <title>Community Science Museum - exhibitions</title>
 </head>
@@ -28,7 +30,7 @@
           <li><a href="explore.html#for_teachers">for teachers</a></li>
           <li><a href="explore.html#researchers">researchers</a></li>
         </ul>
-        <li><a href="exhibition.html">exhibition spaces</a></li>
+        <li class="open-page"><a href="exhibition.html">exhibition spaces</a></li>
         <ul aria-label="sub menu - exhibition spaces" class="sub-menu">
           <li><a href="exhibition.html#cosmology">cosmology</a></li>
           <li><a href="exhibition.html#evolution">evolution</a></li>
@@ -37,7 +39,7 @@
           <li><a href="exhibition.html#ecology">ecology</a></li>
         </ul>
         <li><a href="events.html">special events</a></li>
-        <li class="open-page"><a href="visit.html">visit</a></li>
+        <li><a href="visit.html">visit</a></li>
         <ul aria-label="sub menu - special events" class="sub-menu">
           <li><a href="visit.html#admission">admission</a></li>
           <li><a href="visit.html#accessibility">accessibility</a></li>
@@ -52,25 +54,68 @@
         </ul>
       </ul>
     </nav>
+    <p>@copy 2022</p>
+  </aside>
   <main>
     <div id="mobile-nav">
       <a href="index.html"><img src="assets/images/ligth-icon.svg" alt="logo for the museum"></a>
       <button id="open-menu-btn"><img src="assets/images/open-menu.svg" alt="open the menu"></button>
     </div>
-    <h1 id="page-heading">exhibitions</h1>
-    <ul>
-      <li class="selected"><img src="assets/images/earth.jpg" alt="image of earth form space"></li>
-      <li><img src="assets/images/mammoth-1257288_1920.jpg" alt="image of a skeletal mammoth"></li>
-      <li><img src="assets/images/heart-2607178_1920.jpg" alt="image of a model heart"></li>
-      <li><img src="assets/images/samuel-zeller-158996.jpg" alt="child wearing a 3d headset"></li>
-      <li><img src="assets/images/bee-on-flower.jpg" alt="a bee gathering nectar form a sunflower"></li>
-    </ul>
-    <section aria-labelledby="exhibition-heading" id="variable-content">
-      <h2 id="exhibition-heading">Cosmology</h2>
-      <p>Explore the wonders of our cosmos. Our fantastic exhibition, ‘The Sky Above Us’, explores the night sky and what we can see and know about the universe around us. We’ll locate the various constellations and galaxies that can be seen and learn a bit about the early navigators who used the stars to travel by.</p>
-      <p>Follow the journey of our solar exploration: from early Arab traders, to Galileo’s telescope, to the latest exploration of the planets in our solar system.</p>
-      <img src="assets/images/celso-405219.jpg" alt="image of all the planets in our solar system">
-    </section>
+    <h1 id="page-heading">exhibition spaces</h1>
+    <div aria-label="module tabs" id="module-tabs">
+      <ul aria-label="tabs" id="tabs">
+        <li class="selected">
+          <img src="assets/images/earth.jpg" alt="image of earth form space">
+          <span>cosmology</span>
+        </li>
+        <li>
+          <img src="assets/images/mammoth-1257288_1920.jpg" alt="image of a skeletal mammoth">
+          <span>evolution</span>
+        </li>
+        <li>
+          <img src="assets/images/heart-2607178_1920.jpg" alt="image of a model heart">
+          <span>biology and medicine</span>
+        </li>
+        <li>
+          <img src="assets/images/samuel-zeller-158996.jpg" alt="child wearing a 3d headset">
+          <span>robotics and AI</span>
+        </li>
+        <li>
+          <img src="assets/images/bee-on-flower.jpg" alt="a bee gathering nectar form a sunflower">
+          <span>ecology</span>
+        </li>
+      </ul>
+      <section class="selected" aria-labelledby="heading-cosmology" id="cosmology">
+        <h2 id="heading-cosmology">Cosmology</h2>
+        <p>Explore the wonders of our cosmos. Our fantastic exhibition, ‘The Sky Above Us’, explores the night sky and what we can see and know about the universe around us. We’ll locate the various constellations and galaxies that can be seen and learn a bit about the early navigators who used the stars to travel by.</p>
+        <p>Follow the journey of our solar exploration: from early Arab traders, to Galileo’s telescope, to the latest exploration of the planets in our solar system.</p>
+        <img src="assets/images/celso-405219.jpg" alt="image of all the planets in our solar system">
+      </section>
+      <section aria-labelledby="heading-evolution" id="evolution">
+        <h2 id="heading-evolution">evolution</h2>
+        <p>For centuries, philosophers and scientists have wrestled with the question of our origins. Where do we come from and how did we get here? Since Darwin proposed his theory of evolution we have had a framework for exploring and understanding our place in this world.</p>
+        <p>Discover the origins of life on this planet and how the species we know today have evolved our time. You can also take some time to meet a few of the creatures who didn’t survive, including our Woolly Mammoth, the Dodos, and a number of dinosaurs too.</p>
+        <img src="assets/images/skeleton-414543_1920.jpg" alt="image of changes in human skeletal strukture the our evolution">
+      </section>
+      <section aria-labelledby="heading-biology_and_medicine" id="biology and medicine">
+        <h2 id="heading-biology_and_medicine">biology and medicine</h2>
+        <p>From micro-organisms to the human body, major breakthroughs in biology are offering us unique insights into the great wonders of the tiny world. </p>
+        <p>For many people their life expectancy is much longer and their quality of life much improved, thanks to the growth of our understanding of medicine. Over a series of exhibits we explore the history of medicine and take a look at some major breakthroughs including the discovery of penicillin and the first heart transplant.</p>
+        <p>Many of our great medicinal discoveries have come not only from the lab, but also from observing animals in the wild. Often our fellow creatures have beat us to it.</p>
+        <img src="assets/images/samuel-zeller-113381.jpg" alt="image of human anatomy">
+      </section>
+      <section aria-labelledby="heading-robotics_and_AI" id="robotics and AI">
+        <h2 id="heading-robotics_and_AI">robotics and AI</h2>
+        <p>EThe information revolution is here and robotics and artificial intelligence are the science of the future. From useful home applications of AI to industrial uses of robotics, the future is here. You can even say hello and shake the hand of Rob the Robot.</p>
+        <img src="assets/images/billetto-editorial-334686.jpg" alt="image of all a teenager experiensing AR while painting">
+      </section>
+      <section aria-labelledby="heading-ecology" id="ecology">
+        <h2 id="heading-ecology">ecology</h2>
+        <p>As we learn more and more of the impact humans are having on the planet, the more important it becomes that scientists explore how to create a sustainable future not just for humans but for the whole planet.</p>
+        <p>In our ecology section of the museum, we unpack the dangers we currently face including global warming, extinction of species, and pollution. But we also focus on the positive ways we can all contribute to a brighter future.</p>
+        <img src="assets/images/genoa-956405_1920.jpg" alt="image from our ecology exhibit choving the interaction between ants">
+      </section>
+    </div>
   </main>
 </body>
 </html>
