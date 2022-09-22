@@ -33,8 +33,6 @@ tabList.forEach((Element, Index) => {
     }
 
     btn = Element;
-    console.log(btn.innerText)
-    console.log(btn)
 
     contentList.forEach((Element) => {
       if (Element.classList.contains('selected')) {
