@@ -39,6 +39,11 @@ body {
         justify-self: center;
       }
 
+.visualy-hidden {
+  position: fixed;
+  left: -50rem;
+}
+
     #mobile-nav {
       align-content: space-around;
       justify-content: baseline;

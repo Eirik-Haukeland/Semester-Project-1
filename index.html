@@ -11,6 +11,7 @@
   <title>Community Science Museum</title>
 </head>
 <body>
+  <a class="visualy-hidden" href="#page-heading">go to content</a>
   <aside hidden>
     <a href="index.html"><img src="assets/images/dark-icon.svg" alt="logo for the museum"></a>
     <button id="close-menu-btn"><img src="assets/images/close-menu.svg" alt="close the menu"></button>
@@ -19,39 +20,39 @@
       <input id="search" type="text">
       <button>search</button>
     </form>
-    <ul id="menu">
-      <li class="open-page"><a href="index.html">home</a></li>
-      <li><a href="explore.html">explore</a></li>
-      <ul class="sub-menu" >
-        <li><a href="explore.html#for_kids">for kids</a></li>
-        <li><a href="explore.html#for_teachers">for teachers</a></li>
-        <li><a href="explore.html#researchers">researchers</a></li>
+    <nav aria-label="main menu">
+      <ul aria-label="top menu" id="menu">
+        <li><a href="index.html">home</a></li>
+        <li><a href="explore.html">explore</a></li>
+        <ul aria-label="sub menu - explore" class="sub-menu" >
+          <li><a href="explore.html#for_kids">for kids</a></li>
+          <li><a href="explore.html#for_teachers">for teachers</a></li>
+          <li><a href="explore.html#researchers">researchers</a></li>
+        </ul>
+        <li><a href="exhibition.html">exhibition spaces</a></li>
+        <ul aria-label="sub menu - exhibition spaces" class="sub-menu">
+          <li><a href="exhibition.html#cosmology">cosmology</a></li>
+          <li><a href="exhibition.html#evolution">evolution</a></li>
+          <li><a href="exhibition.html#biology and medicine">biology and medicine</a></li>
+          <li><a href="exhibition.html#robotics and AI">robotics and AI</a></li>
+          <li><a href="exhibition.html#ecology">ecology</a></li>
+        </ul>
+        <li><a href="events.html">special events</a></li>
+        <li class="open-page"><a href="visit.html">visit</a></li>
+        <ul aria-label="sub menu - special events" class="sub-menu">
+          <li><a href="visit.html#admission">admission</a></li>
+          <li><a href="visit.html#accessibility">accessibility</a></li>
+          <li><a href="visit.html#cafè">cafè</a></li>
+          <li><a href="visit.html#shop">shop</a></li>
+        </ul>
+        <li><a href="involved.html">get involved</a></li>
+        <ul aria-label="sub menu - get involved" class="sub-menu">
+          <li><a href="involved.html#Support">Support</a></li>
+          <li><a href="involved.html#Volunteer">Volunteer</a></li>
+          <li><a href="involved.html#Internships">Internships</a></li>
+        </ul>
       </ul>
-      <li><a href="exhibition.html">exhibition spaces</a></li>
-      <ul class="sub-menu">
-        <li><a href="exhibition.html#cosmology">cosmology</a></li>
-        <li><a href="exhibition.html#evolution">evolution</a></li>
-        <li><a href="exhibition.html#biology and medicine">biology and medicine</a></li>
-        <li><a href="exhibition.html#robotics and AI">robotics and AI</a></li>
-        <li><a href="exhibition.html#ecology">ecology</a></li>
-      </ul>
-      <li><a href="events.html">special events</a></li>
-      <li><a href="visit.html">visit</a></li>
-      <ul class="sub-menu">
-        <li><a href="visit.html#admission">admission</a></li>
-        <li><a href="visit.html#accessibility">accessibility</a></li>
-        <li><a href="visit.html#cafè">cafè</a></li>
-        <li><a href="visit.html#shop">shop</a></li>
-      </ul>
-      <li><a href="involved.html">get involved</a></li>
-      <ul class="sub-menu">
-        <li><a href="involved.html#Support">Support</a></li>
-        <li><a href="involved.html#Volunteer">Volunteer</a></li>
-        <li><a href="involved.html#Internships">Internships</a></li>
-      </ul>
-    </ul>
-    <p>@copy 2022</p>
-  </aside>
+    </nav>
   <main>
     <div id="mobile-nav">
       <a href="index.html"><img src="assets/images/ligth-icon.svg" alt="logo for the museum"></a>
