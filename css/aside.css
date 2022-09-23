@@ -7,7 +7,6 @@ aside {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   row-gap: 2rem;
-  grid-template-rows: fit-content .1rem;
   justify-content: center;
   
   height: 100vh;
@@ -68,6 +67,7 @@ aside img {
 
 aside ul {
   list-style: none;
+  height: fit-content;
 }
 
 #menu {
@@ -112,4 +112,24 @@ aside p,
   font-size: 28px;
   font-family: 'Aleo', serif;
   color: var(--ligth-text);
+}
+
+@media only screen and (min-width: 1200px) {
+  aside {
+    position: static;
+    grid-column: 1 / 2;
+    width: unset;
+  }
+
+  aside:not([hidden]) + main {
+    overflow: scroll;
+  }
+
+  aside >*{
+    grid-column: 1;
+  }
+
+  #close-menu-btn {
+    display: none;
+  }
 }

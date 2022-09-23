@@ -129,6 +129,34 @@ table {
     );
   }
 
+  #tabs > li:first-of-type > img {
+    border-radius: .5rem 0 0 .5rem;
+  }
+
+  #tabs > li:first-of-type.selected > img {
+    clip-path: polygon(
+      0% 0%,
+      calc(100% - .75rem) 0%, /*rigth top*/
+      100% 50%, /*rigth angle*/
+      calc(100% - .75rem) 100%, /*rigth bottom*/
+      0% 100%
+    );
+  }
+
+  #tabs > li:last-of-type > img {
+    border-radius: 0 .5rem .5rem 0;
+  }
+
+  #tabs > li:last-of-type.selected > img {
+    clip-path: polygon(
+      0% 50%, /*left angle*/
+      .75rem 0%, /*left top*/
+      100% 0%, /*rigth top*/
+      100%  100%, /*rigth bottom*/
+      .75rem 100% /*left bottom*/
+    );
+  }
+
   #tabs > .selected img {
     background-color: var(--hi-ligth);
     border-radius: 0;

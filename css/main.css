@@ -15,7 +15,6 @@
 body {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 1rem;
   width: 100vw;
   height: 100vh;
 }
@@ -25,7 +24,7 @@ body {
       grid-row: 1;
       display: grid;
       grid-template-columns: subgrid;
-      gap: inherit;
+      gap: 1rem;
       background-color: var(--ligth-bg);
     }
 
@@ -46,7 +45,6 @@ body {
 
     #mobile-nav {
       align-content: space-around;
-      justify-content: baseline;
       margin-top: .5rem;
       margin-left: .5rem;
 
@@ -93,3 +91,22 @@ body {
         height: 3rem;
         border-radius: unset;
       }
+
+@media only screen and (min-width: 1200px) {
+  #mobile-nav {
+    display: none;
+  }
+  
+  main {
+    grid-column: 2/ span 4;
+  }
+
+  #page-heading {
+    grid-column: 1/ span 4;
+    justify-self: center;
+  }
+
+  main > *:not(:first-child) {
+    margin-inline: 5rem;
+  }
+}

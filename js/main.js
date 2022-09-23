@@ -12,3 +12,5 @@ closeMenuBtn.addEventListener('click', (event) => {
   aside.hidden = true;
   //make main scroll again
 })
+
+document.scre
