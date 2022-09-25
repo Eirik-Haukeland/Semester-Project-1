@@ -6,42 +6,43 @@ aside {
 
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: min-content, 1rem, repeat(2, 1fr);
   row-gap: 2rem;
   justify-content: center;
-  align-items: baseline;
   
-  height: 100vh;
+  min-height: 100vh;
+  max-width: 30rem;
   width: 80vw;
-  padding: 1rem;
   
   background-color: var(--dark-bg);
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 aside:not([hidden]) + main #open-menu-btn {
   display: none;
 }
 
-aside:not([hidden]) + main {
-  overflow: hidden;
+aside > * {
+  grid-column: 1/ span 4;
+  justify-self: center;
 }
 
-aside > * {
-  grid-column: 2/ 4;
-  align-self: baseline;
+aside form {
+  box-sizing: border-box;
 }
 
 #close-menu-btn {
   position: fixed;
-  left: 1rem;
+  left: .2rem;
   top: 5rem;
   grid-column: 1/ 2;
   grid-row: 1/ 2;
 
+  justify-self: baseline;
+
   height: 3rem;
-  height: auto;
-  border: unset;
+  width: auto;
+  /* border: unset; */
 
   background-color: var(--dark-bg);
   border: none;
@@ -56,8 +57,8 @@ aside > a {
   grid-row: 1 / 2;
 
   background-color: var(--middle-bg);
-  height: 8rem;
-  width: 8rem;
+  height: clamp(3rem, 50vw, 7rem);
+  width: auto;
   border-radius: 25rem;
   justify-self: center;
 
@@ -71,10 +72,7 @@ aside img {
   border-radius: 25rem;
 }
 
-aside > form {
-  height: min-content;
-  margin: 0;
-}
+
 
 aside ul {
   list-style: none;
@@ -82,9 +80,14 @@ aside ul {
 }
 
 #menu {
-  padding-left: 0;  /* remove intent form main menu*/
+  padding-inline: 0.5rem;  /* remove intent form main menu*/
   min-height: 520px;
   min-width: 300px;
+  white-space: nowrap;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  font-size: clamp(1rem, 5vw, 1.5rem)!important;
 }
 
 #menu li {
@@ -102,7 +105,7 @@ aside ul {
   background-color: var(--hi-ligth);
   color: var(--dark-text);
   text-decoration: none;
-  padding-left: .15rem;
+  /* padding-left: .15rem; */
 }
 
 .sub-menu {
@@ -122,35 +125,33 @@ aside ul {
 
 aside p,
 #menu a {
-  font-size: 28px;
+  /* font-size: 28px; */
   font-family: 'Aleo', serif;
   color: var(--ligth-text);
 }
 
 @media only screen and (min-width: 900px) {
   aside {
-    position: static;
-    width: 14rem;
-    justify-items: center;
-    align-items: center;
-    position: static;
+    position: sticky;
     top: 0px;
+    width: 350px;
+    /* justify-items: center; */
+    /* align-items: center; */
     padding-block: 0;
-
-    overflow: initial;
-  }
-
-  aside:not([hidden]) + main {
-    overflow: scroll;
+    height: 100vh;
   }
 
   aside >*{
     grid-column: 1 / span 4;
-    align-self: baseline;
+    /* align-self: baseline; */
   }
 
   aside p {
     align-self: flex-end;
+  }
+
+  #menu {
+    
   }
 
   #close-menu-btn {
