@@ -6,8 +6,10 @@ aside {
 
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: min-content, 1rem, repeat(2, 1fr);
   row-gap: 2rem;
   justify-content: center;
+  align-items: baseline;
   
   height: 100vh;
   width: 80vw;
@@ -27,6 +29,7 @@ aside:not([hidden]) + main {
 
 aside > * {
   grid-column: 2/ 4;
+  align-self: baseline;
 }
 
 #close-menu-btn {
@@ -57,6 +60,9 @@ aside > a {
   width: 8rem;
   border-radius: 25rem;
   justify-self: center;
+
+  margin-top: 2.5rem;
+
 }
 
 aside img {
@@ -65,13 +71,20 @@ aside img {
   border-radius: 25rem;
 }
 
+aside > form {
+  height: min-content;
+  margin: 0;
+}
+
 aside ul {
   list-style: none;
-  height: fit-content;
+  /* height: fit-content; */
 }
 
 #menu {
   padding-left: 0;  /* remove intent form main menu*/
+  min-height: 520px;
+  min-width: 300px;
 }
 
 #menu li {
@@ -96,7 +109,7 @@ aside ul {
   display: none;
   padding: 0;
   position: relative;
-  left: 1rem;
+  left: 1.5rem;
 }
 
 :is(
@@ -114,11 +127,17 @@ aside p,
   color: var(--ligth-text);
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 900px) {
   aside {
     position: static;
-    grid-column: 1 / 2;
-    width: unset;
+    width: 14rem;
+    justify-items: center;
+    align-items: center;
+    position: static;
+    top: 0px;
+    padding-block: 0;
+
+    overflow: initial;
   }
 
   aside:not([hidden]) + main {
@@ -126,7 +145,12 @@ aside p,
   }
 
   aside >*{
-    grid-column: 1;
+    grid-column: 1 / span 4;
+    align-self: baseline;
+  }
+
+  aside p {
+    align-self: flex-end;
   }
 
   #close-menu-btn {

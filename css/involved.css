@@ -6,6 +6,10 @@ section {
   gap: .5rem;
 }
 
+#page-heading{
+  grid-column: 1 / span 5;
+}
+
 section > * {
   grid-column: span 5;
 }
@@ -37,4 +41,66 @@ section:nth-of-type(2) > img {
 section p {
   font-size: 21px;
   padding-inline: 2.5rem;
+}
+
+@media only screen and (min-width: 900px) {
+  main {
+    padding-inline: 1rem;
+  }
+  
+  section {
+    grid-template-columns: subgrid;
+    position: relative;
+    gap: 1em;
+  }
+
+  section p {
+    width: 100%;
+    padding-inline: unset;
+  }
+
+  section:first-of-type p,
+  section:nth-of-type(2) img,
+  section:last-of-type p {
+    grid-column: 1/ span 2;
+  }
+
+  section:first-of-type img,
+  section:nth-of-type(2) p,
+  section:last-of-type img {
+    grid-column: 3/ span 2;
+  }
+
+  section:first-of-type img {
+    grid-row: 2/ span 4;
+    position: sticky;
+    top: 6em;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    /* object-position: 0 30%; */
+  }
+
+  section:nth-of-type(2) img {
+    grid-row: 2/ span 2;
+    position: sticky;
+    top: 6em;
+    width: 100%;
+    height: clamp(100%, 20rem);
+    object-fit: cover;
+    /* object-position: 0 30%; */
+  }
+
+  section:last-of-type img {
+    grid-row: 2 / 4;
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+    object-position: 30% 30%;
+    align-self: center;
+  }
+
+  section:last-of-type{
+    margin-bottom: 2.5em;
+  }
 }

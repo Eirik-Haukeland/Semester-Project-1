@@ -104,6 +104,8 @@ table {
   grid-template-columns: subgrid;
   grid-template-rows: repeat(2, auto);
   gap: .5rem;
+  margin-inline: 2rem;
+  margin-top: .5rem;
 }
 
 #module-tabs section.selected {
@@ -133,4 +135,83 @@ table {
 
 #module-tabs section img {
   width: 100%;
+}
+
+@media only screen and (min-width: 700px) {
+  #location img {
+    position: relative;
+    right: 3rem;
+    top: 1rem;
+    width: 12rem;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  aside {
+    width: 15rem;
+  }
+
+  table {
+    margin-left: 2rem;
+  }
+
+  main > * {
+    grid-column: span 4;
+  }
+
+  main > *:last-child {
+    margin-inline: 0;
+  }
+
+  table {
+    right: 5rem;
+    top: 5.5rem;
+  }
+
+  table > tr:not(:first-of-type) > th {
+    width: min-content;
+  }
+
+  #location img {
+    position: relative;
+    left: 1rem;
+  }
+
+  #tabs {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  main > div:nth-of-type(2) {
+    grid-column: 1;
+    justify-self: center;
+  }
+
+  #location {
+    grid-row: 1 / 2;
+    display: grid;
+    gap: .5rem;
+  }
+
+  #location img {
+    width: 15rem;
+    position: relative;
+    left: 0;
+  }
+
+  #location * {
+    width: 100%;
+  }
+
+  table {
+    position: initial;
+    top: unset;
+  }
+
+  #module-tabs {
+    grid-column: 2 / span 3;
+    margin: 0;
+    height: min-content;
+  }
 }

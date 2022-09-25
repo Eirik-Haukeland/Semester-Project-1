@@ -17,6 +17,7 @@ body {
   grid-template-columns: repeat(5, 1fr);
   width: 100vw;
   height: 100vh;
+  background-color: var(--ligth-bg);
 }
 
     main {
@@ -25,17 +26,16 @@ body {
       display: grid;
       grid-template-columns: subgrid;
       gap: 1rem;
-      background-color: var(--ligth-bg);
     }
 
     #page-heading {
       grid-column: 2 / span 4;
+      justify-self: center;
     }
 
       h1 {
         font-size: 67px;
         font-family: 'Aleo', serif;
-        justify-self: center;
       }
 
 .visualy-hidden {
@@ -92,7 +92,7 @@ body {
         border-radius: unset;
       }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 900px) {
   #mobile-nav {
     display: none;
   }
@@ -106,7 +106,7 @@ body {
     justify-self: center;
   }
 
-  main > *:not(:first-child) {
+  /* main > *:not(:first-child) {
     margin-inline: 5rem;
-  }
+  } */
 }

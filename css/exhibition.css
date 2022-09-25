@@ -2,64 +2,18 @@ main {
   grid-template-rows: min-content min-content auto;
 }
 
-main > div:nth-of-type(2) {
-  display: grid;
-  grid-column: span 5;
-  grid-template-columns: subgrid;
-  gap: .5rem;
-  padding-inline: .5rem;
-}
-
-#location {
-  grid-column: 2 / span 5;
-  grid-row: 2;
-  display: grid;
-  grid-template-columns: subgrid;
-}
-
-  #location h2 {
-    grid-column: span 5;
-    grid-row: 1 / 2;
-    justify-self: center;
-  }
-
-  #location p {
-    grid-column: span 5;
-    grid-row: 2 / 3;
-    padding-inline: unset;
-  }
-
-  #location img {
-    grid-column: 4;
-    grid-row: 3;
-    width: 9rem;
-    height: 13rem;
-    object-fit: cover;
-    object-position: 70% 0;
-  }
-
-table {
-  grid-column: 1 / span 4;
-  grid-row: 2;
-  position: relative;
-  top: 5rem;
-  height: 1rem;
-}
-
-  table > tr:not(:first-child) > th {
-    text-align: left;
-  }
-
 #tabs {
   grid-column: span 5;
   display: flex;
   list-style: none;
-  border: .1em solid var(--hi-ligth);
+  border: .2em solid var(--hi-ligth);
   border-radius: .5em;
-  gap: .1em;
+  gap: .2em;
   padding: 0;
   background-color: var(--hi-ligth);
   position: relative;
+  width: fit-content;
+  justify-self: center;
 }
 
   #tabs > li {
@@ -212,4 +166,55 @@ table {
   height: 20rem;
   object-fit: cover;
   object-position: 0 70%;
+}
+
+@media only screen and (min-width: 700px) {
+  #tabs > li {
+    height: 5rem;
+  }
+
+  #tabs > li > img {
+    position: relative;
+    height: 100%;
+    width: 5rem;
+    justify-self: flex-start;
+    object-fit: cover;
+    object-position: 0 70%;
+  }
+
+  #tabs > li > img:hover + span {
+    top: 5rem;
+  }
+
+  #module-tabs > section {
+    padding: 2rem 0;
+  }
+
+  #module-tabs > section > :is(img, p) {
+    width: 60vw;
+    justify-self: center;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  #tabs {
+    margin-inline: 5rem;
+  }
+
+  #tabs > li {
+    height: 6rem;
+  }
+
+  #tabs > li > img {
+    position: relative;
+    height: 100%;
+    width: 8rem;
+    justify-self: flex-start;
+    object-fit: cover;
+    object-position: 0 70%;
+  }
+
+  #tabs > li > img:hover + span {
+    top: 6rem;
+  }
 }

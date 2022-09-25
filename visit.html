@@ -5,15 +5,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="assets/images/icon-1719742.svg" type="image/svg">
-  <link rel="stylesheet" href="css/visit.css">
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/visit.css">
   <script src="js/main.js" defer></script>
   <script src="js/tabs.js" defer></script>
   <title>Community Science Museum - visit</title>
 </head>
 <body>
   <a class="visualy-hidden" href="#page-heading">go to content</a>
-  <aside hidden>
+  <aside >
     <a href="index.html"><img src="assets/images/dark-icon.svg" alt="logo for the museum"></a>
     <button id="close-menu-btn"><img src="assets/images/close-menu.svg" alt="close the menu"></button>
     <form action="" method="post">
@@ -26,8 +26,8 @@
         <li><a href="index.html">home</a></li>
         <li><a href="explore.html">explore</a></li>
         <ul aria-label="sub menu - explore" class="sub-menu" >
-          <li><a href="explore.html#for_kids">for kids</a></li>
-          <li><a href="explore.html#for_teachers">for teachers</a></li>
+          <li><a href="explore.html#for kids">for kids</a></li>
+          <li><a href="explore.html#for teachers">for teachers</a></li>
           <li><a href="explore.html#researchers">researchers</a></li>
         </ul>
         <li><a href="exhibition.html">exhibition spaces</a></li>
@@ -40,10 +40,10 @@
         </ul>
         <li><a href="events.html">special events</a></li>
         <li class="open-page"><a href="visit.html">visit</a></li>
-        <ul aria-label="sub menu - special events" class="sub-menu">
-          <li><a href="visit.html#admission">admission</a></li>
-          <li><a href="visit.html#accessibility">accessibility</a></li>
-          <li><a href="visit.html#cafè">cafè</a></li>
+        <ul aria-label="sub menu - visit" class="sub-menu">
+          <li class="open-page"><a href="visit.html#admission">admission</a></li>
+          <li><a href="visit.html#accessesibility">accessesibility</a></li>
+          <li><a href="visit.html#cafe">cafe</a></li>
           <li><a href="visit.html#shop">shop</a></li>
         </ul>
         <li><a href="involved.html">get involved</a></li>
@@ -104,10 +104,18 @@
     </div>
     <div aria-label="module tabs" id="module-tabs">
     <ul aria-label="tabs" id="tabs">
-      <li tabindex="0" class="selected" role="button">admission</li>
-      <li tabindex="0" role="button">accessesibility</li>
-      <li tabindex="0" role="button">cafè</li>
-      <li tabindex="0" role="button">shop</li>
+      <li tabindex="0" class="selected" role="button">
+        <span>admission</span>
+      </li>
+      <li tabindex="0" role="button">
+        <span>accessesibility</span>
+      </li>
+      <li tabindex="0" role="button">
+        <span>cafe</span>
+      </li>
+      <li tabindex="0" role="button">
+        <span>shop</span>
+      </li>
     </ul>
       <section aria-labelledby="heading-admission" id="admission" class="selected">
         <h2 id="heading-admission">admission</h2>
@@ -121,8 +129,8 @@
         <p>The museum has wheelchair accessibility ramps. It also has audio guides and braille display signs for the visually impaired.</p>
         <img src="assets/images/wheelcheer.jpg" alt="a man in a wheelchair showing our exhibits to his ganddother">
       </section>
-      <section aria-labelledby="heading-cafè" id="cafè">
-        <h2 id="heading-cafè">cafè</h2>
+      <section aria-labelledby="heading-cafe" id="cafe">
+        <h2 id="heading-cafe">cafe</h2>
         <p>There is a café attached to the museum where you can get light lunches, soft drinks, coffee, snacks and more.</p>
         <img src="assets/images/food.webp" alt="one of the other tasty meals on our meny">
       </section>

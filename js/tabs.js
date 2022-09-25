@@ -17,30 +17,82 @@ contentContainers.childNodes.forEach((Element) => {
 
 tabList.forEach((Element, Index) => {
   Element.addEventListener("click", (event) => {
+    Element.childNodes.forEach(Element => {
+      if (Element.tagName === 'SPAN') {
+        document.location.hash = Element.innerText
+      }
+    })
+  })
+})
 
-    tabList.forEach((Element,) => {
+
+window.addEventListener('hashchange', (event) => {
+
+  const hash = document.location.hash.split('%20').join(' ').split('#')[1]
+
+  contentList.forEach((Element) => {
+    if (Element.classList.contains('selected')) {
+      Element.classList.remove('selected')
+    } 
+    if (Element.id === hash) {
+      Element.classList.add('selected')
+    }
+  })
+
+  tabList.forEach((Element, Index) => {
+    if (Element.classList.contains('selected')) {
+      Element.classList.remove('selected')
+    } else if (Element.classList.contains('prev')) {
+      Element.classList.remove('prev')
+    }
+
+    let parent = Element
+    let PreviusIndex = Index - 1
+    Element.childNodes.forEach(Element => {
+      if (Element.tagName === 'SPAN' && Element.innerText === hash) {
+        // document.location.hash = Element.innerText
+        parent.classList.add('selected')
+          if (PreviusIndex >= 0){
+            tabList[PreviusIndex].classList.add('prev')
+          }
+      }
+    })
+  })
+})
+
+window.addEventListener('DOMContentLoaded', (event) => {
+
+  const hash = document.location.hash.split('%20').join(' ').split('#')[1]
+
+  if (hash) {
+    contentList.forEach((Element) => {
+      if (Element.classList.contains('selected')) {
+        Element.classList.remove('selected')
+      } 
+      if (Element.id === hash) {
+        Element.classList.add('selected')
+      }
+    })
+  
+    tabList.forEach((Element, Index) => {
       if (Element.classList.contains('selected')) {
         Element.classList.remove('selected')
       } else if (Element.classList.contains('prev')) {
         Element.classList.remove('prev')
       }
+  
+      let parent = Element
+      let PreviusIndex = Index - 1
+      Element.childNodes.forEach(Element => {
+        if (Element.tagName === 'SPAN' && Element.innerText === hash) {
+          // document.location.hash = Element.innerText
+          parent.classList.add('selected')
+            if (PreviusIndex >= 0){
+              tabList[PreviusIndex].classList.add('prev')
+            }
+        }
+      })
     })
+  }
 
-    let PreviusIndex = Index - 1
-    Element.classList.add('selected')
-    if (PreviusIndex >= 0){
-      tabList[PreviusIndex].classList.add('prev')
-    }
-
-    btn = Element;
-
-    contentList.forEach((Element) => {
-      if (Element.classList.contains('selected')) {
-        Element.classList.remove('selected')
-      } 
-      if (Element.id === btn.innerText) {
-        Element.classList.add('selected')
-      }
-    })
-  })
 })

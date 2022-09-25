@@ -53,5 +53,7 @@
   #page-content img:nth-of-type(2) {
     grid-row: span 2;
     height: auto;
+    min-height: 15rem;
+    object-position: 0% 50%;
   }
 }
