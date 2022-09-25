@@ -3,6 +3,13 @@ const closeMenuBtn = document.getElementById('close-menu-btn')
 const aside = document.querySelector('aside');
 const main = document.querySelector('main')
 const mainMenu = document.querySelector('#menu')
+const form = document.querySelector('form')
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+  alert('not implemented');
+})
+
 
 openMenuBtn.addEventListener('click', (event) => { 
   aside.hidden = false;
@@ -12,11 +19,27 @@ closeMenuBtn.addEventListener('click', (event) => {
   aside.hidden = true;
 })
 
+// mainMenu.childNodes.forEach((Element, Index) => {
+//   if (Element.tagName === 'UL' && Element.classList.contains('sub-menu')) {
+//     Element.childNodes.forEach((Element) => {
+//       if (Element.tagName === 'LI') {
+//         Element.addEventListener('click', () => {
+//           mainMenu.childNodes[Index].childNodes.forEach((Element) => {
+//             if (Element.tagName === 'LI' && Element.classList.contains('open-page')) {
+//               Element.classList.remove('open-page')
+//             }
+//           })
+//           Element.classList.add('open-page')
+//         })
+//       }
+//     })
+// }})
+
 mainMenu.childNodes.forEach((Element, Index) => {
   if (Element.tagName === 'UL' && Element.classList.contains('sub-menu')) {
     Element.childNodes.forEach((Element) => {
       if (Element.tagName === 'LI') {
-        Element.addEventListener('click', (event) => {
+        Element.addEventListener('hashchange', () => {
           mainMenu.childNodes[Index].childNodes.forEach((Element) => {
             if (Element.tagName === 'LI' && Element.classList.contains('open-page')) {
               Element.classList.remove('open-page')
@@ -47,11 +70,17 @@ document.addEventListener('DOMContentLoaded', (event) => {
   }
 })
 
+
+let prevWidth;
 window.addEventListener('resize', (event) => {
-  if (window.innerWidth >= 900) {
-    aside.hidden = false
-  } else {
-    aside.hidden = true
+  // so that it do not colse window when teh phone navbar resizes window height
+  if (window.innerWidth !== prevWidth) {
+    prevWidth = window.innerWidth
+    if (window.innerWidth >= 900) {
+      aside.hidden = false;
+    } else {
+      aside.hidden = true;
+    }
   }
 })
 

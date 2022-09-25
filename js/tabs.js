@@ -15,8 +15,8 @@ contentContainers.childNodes.forEach((Element) => {
   }
 })
 
-tabList.forEach((Element, Index) => {
-  Element.addEventListener("click", (event) => {
+tabList.forEach((Element) => {
+  Element.addEventListener("click", () => {
     Element.childNodes.forEach(Element => {
       if (Element.tagName === 'SPAN') {
         document.location.hash = Element.innerText
@@ -24,7 +24,6 @@ tabList.forEach((Element, Index) => {
     })
   })
 })
-
 
 window.addEventListener('hashchange', (event) => {
 
