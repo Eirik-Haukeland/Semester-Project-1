@@ -2,13 +2,27 @@ main {
   grid-template-rows: min-content min-content auto;
 }
 
-#tabs {
-  grid-column: span 5;
+#module-tabs > div {
   display: flex;
+  justify-content: space-around;
+
+  grid-column: span 5;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  padding-bottom: 1.5rem;
+
+}
+
+#tabs {
+  display: flex;
+
   list-style: none;
+
   border: .2em solid var(--hi-ligth);
   border-radius: .5em;
+
   gap: .2em;
+
   padding: 0;
   background-color: var(--hi-ligth);
   position: relative;
@@ -38,16 +52,6 @@ main {
     object-fit: cover;
     object-position: 0 70%;
   }
-
-  /* #tabs > li > img::before{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 2rem;
-    height: 2rem;
-    z-index: 1;
-    background-color: #000;
-  } */
 
   #tabs > li > span {
     display: none;
