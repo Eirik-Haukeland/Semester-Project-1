@@ -7,7 +7,7 @@ main > div:nth-of-type(2) {
 }
 
 #location {
-  grid-column: 2 / span 5;
+  grid-column: 1 / span 5;
   grid-row: 2;
   display: grid;
   grid-template-columns: subgrid;
@@ -43,7 +43,7 @@ table {
 }
 
   table > tr:not(:first-child) > th {
-    text-align: left;
+    text-align: right;
   }
 
 #tabs {
@@ -114,6 +114,7 @@ table {
   grid-template-columns: subgrid;
   grid-template-rows: repeat(2, auto);
   gap: .5rem;
+  height: 40rem;
 }
 
 #module-tabs section {
@@ -147,10 +148,6 @@ table {
 }
 
 @media only screen and (min-width: 900px) {
-  aside {
-    width: 15rem;
-  }
-
   table {
     margin-left: 2rem;
   }
