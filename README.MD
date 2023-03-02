@@ -1,6 +1,6 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/6cadece7-376e-4ed3-8df7-01112636b75b/deploy-status)](https://app.netlify.com/sites/brilliant-blancmange-0b76a9/deploys)
 
-# [README: exam project 1](https://github.com/Noroff-FEU-Assignments/project-exam-1-Eirik-Haukeland)
+# [README: exam project 1](https://github.com/Eirik-Haukeland/Semester-Project-1)
 by [Eirik Berget Haukeland](https://github.com/Eirik-Haukeland)
 
 this is the front end for a museum site
