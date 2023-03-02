@@ -9,7 +9,6 @@ this is the front end for a museum site
 - Html
 - Css
 - JavaScript
-- cms (WordPress)
 
 ## get the code
 
