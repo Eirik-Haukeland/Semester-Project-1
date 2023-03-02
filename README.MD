@@ -17,7 +17,7 @@ you need to download gh cli tool [look here for information](https://github.com/
 
 Fork the repo:
 ``` shell
-  $ gh repo fork git@github.com/Noroff-FEU-Assignments/project-exam-1-Eirik-Haukeland
+  $ gh repo fork git@github.com/Eirik-Haukeland/Semester-Project-1
 ```
 
 ### with standard git cli
@@ -35,7 +35,7 @@ check the current remote:
 
 set the new remote:
 ``` shell
-  $ git remote set-url origin https://github.com/Eirik-Haukeland/Semester-Project-1
+  $ git remote set-url origin example.url/repo-name
 ```
 
 verify that the remote has been sett properly:
