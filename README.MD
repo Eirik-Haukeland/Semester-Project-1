@@ -10,22 +10,22 @@ This is the front end for a museum site
 - Css
 - JavaScript
 
-## get the code
+## Get the code
 
-### with gh cli tool
-You need to download gh cli tool [look here for information](https://github.com/cli/cli#installation)
+### With gh Cli tool
+You need to download gh CLI tool [look here for information](https://github.com/cli/cli#installation)
 
 Fork the repo:
 ``` shell
-  $ gh repo fork git@github.com/Eirik-Haukeland/Semester-Project-1
+  $ gh repo fork https://github.com/Eirik-Haukeland/Semester-Project-1
 ```
 
-### with standard git cli
-You need to download git cli tool [look here for information](https://git-scm.com/downloads)
+### With standard git CLI
+You need to download git CLI tool [look here for information](https://git-scm.com/downloads)
 
 Clone the repo:
 ``` shell
-  $ git clone git@github.com/Eirik-Haukeland/Semester-Project-1
+  $ git clone https://github.com/Eirik-Haukeland/Semester-Project-1
 ```
 
 Check the current remote:
@@ -48,11 +48,11 @@ Push to new repo:
   $ git push origin master
 ```
 
-## Hosing the web page
+## Hosting the web page
 Once you have the repo you will need to sett up the web host:
 
 You might use [GitHub pages](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site),
-Netlify [se here](https://docs.netlify.com/get-started/), or
+Netlify [see here](https://docs.netlify.com/get-started/), or
 sett your own web server.
 
 ## License
