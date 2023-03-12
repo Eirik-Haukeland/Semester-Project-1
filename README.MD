@@ -1,9 +1,9 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/6cadece7-376e-4ed3-8df7-01112636b75b/deploy-status)](https://app.netlify.com/sites/brilliant-blancmange-0b76a9/deploys)
 
-# [README: exam project 1](https://github.com/Eirik-Haukeland/Semester-Project-1)
+# [README: Semester project 1](https://github.com/Eirik-Haukeland/Semester-Project-1)
 by [Eirik Berget Haukeland](https://github.com/Eirik-Haukeland)
 
-this is the front end for a museum site
+This is the front end for a museum site
 
 ## Built With
 - Html
@@ -13,7 +13,7 @@ this is the front end for a museum site
 ## get the code
 
 ### with gh cli tool
-you need to download gh cli tool [look here for information](https://github.com/cli/cli#installation)
+You need to download gh cli tool [look here for information](https://github.com/cli/cli#installation)
 
 Fork the repo:
 ``` shell
@@ -21,37 +21,37 @@ Fork the repo:
 ```
 
 ### with standard git cli
-you need to download git cli tool [look here for information](https://git-scm.com/downloads)
+You need to download git cli tool [look here for information](https://git-scm.com/downloads)
 
-clone the repo:
+Clone the repo:
 ``` shell
   $ git clone git@github.com/Eirik-Haukeland/Semester-Project-1
 ```
 
-check the current remote:
+Check the current remote:
 ``` shell
   $ git remote -v
 ```
 
-set the new remote:
+Set the new remote:
 ``` shell
   $ git remote set-url origin example.url/repo-name
 ```
 
-verify that the remote has been sett properly:
+Verify that the remote has been sett properly:
 ``` shell
   $ git remote -v
 ```
 
-push to new repo:
+Push to new repo:
 ```shell
   $ git push origin master
 ```
 
-## hosing the web page
-once you have the repo you will need to sett up the web host:
+## Hosing the web page
+Once you have the repo you will need to sett up the web host:
 
-you might use [GitHub pages](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site),
+You might use [GitHub pages](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site),
 Netlify [se here](https://docs.netlify.com/get-started/), or
 sett your own web server.
 
